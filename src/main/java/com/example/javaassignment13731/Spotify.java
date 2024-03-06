@@ -6,10 +6,10 @@ public class Spotify {
     private String trackName;
     private String artist;
     private int year;
-    private int streams;
+    private double streams;
 
 //constructors
-    public Spotify(int songId, String trackName, String artist, int year, int streams) {
+    public Spotify(int songId, String trackName, String artist, int year, double streams) {
         setSongId(songId);
         setTrackName(trackName);
         setArtist(artist);
@@ -71,7 +71,7 @@ public class Spotify {
         return streams;
     }
 
-    public void setStreams(int streams) {
+    public void setStreams(double streams) {
         if(streams <= 0){
             throw new IllegalArgumentException("Streams cannot be negative");
         } else {
