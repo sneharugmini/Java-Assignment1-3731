@@ -78,4 +78,12 @@ public class Spotify {
         this.streams = streams;
         }
     }
+
+    // to string
+
+    @Override
+    public String toString() {
+        return String.format("%d: The streams of %s created by %s on %d + is %f." ,
+                songId, trackName, artist, year, streams);
+    }
 }
