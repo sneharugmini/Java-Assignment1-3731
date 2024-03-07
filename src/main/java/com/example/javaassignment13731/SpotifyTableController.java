@@ -4,6 +4,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 
+import javax.swing.text.TableView;
+
 public class SpotifyTableController {
 
     @FXML
@@ -20,6 +22,9 @@ public class SpotifyTableController {
 
     @FXML
     private TableColumn<?, ?> yearColumn;
+
+    @FXML
+    private TableView<Spotify> tableView;
 
     @FXML
     void addNewBook_onClick(ActionEvent event) {
