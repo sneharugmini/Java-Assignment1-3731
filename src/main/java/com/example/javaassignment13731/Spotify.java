@@ -17,6 +17,15 @@ public class Spotify {
         setStreams(streams);
     }
 
+    //overloaded constructor
+    public Spotify(String trackName, String artist, int year, double streams) {
+        this.songId = -1;
+        setTrackName(trackName);
+        setArtist(artist);
+        setYear(year);
+        setStreams(streams);
+    }
+
     //method - getter setter
 
     public int getSongId() {

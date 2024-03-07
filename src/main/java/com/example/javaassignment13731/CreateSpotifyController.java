@@ -50,7 +50,10 @@ public class CreateSpotifyController implements Initializable {
 
             //initialize spotify object to pass to constructor
             Spotify spotify = new Spotify(1, trackName, artist, year, streams);
-            finalLabel.setText(spotify.toString());
+
+            // adding song data to database
+            int generatedSongId = DBUtility.insertSongToDB(spotify);
+            finalLabel.setText("Song with id: " + generatedSongId + "added.");
         } catch (Exception e){
             finalLabel.setText(e.getMessage());
         }
