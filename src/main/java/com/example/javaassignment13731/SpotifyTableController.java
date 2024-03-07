@@ -9,19 +9,19 @@ import javax.swing.text.TableView;
 public class SpotifyTableController {
 
     @FXML
-    private TableColumn<?, ?> artistColumn;
+    private TableColumn<Spotify, String> artistColumn;
 
     @FXML
-    private TableColumn<?, ?> songIdColumn;
+    private TableColumn<Spotify, Integer> songIdColumn;
 
     @FXML
-    private TableColumn<?, ?> streamColumn;
+    private TableColumn<Spotify, Double> streamColumn;
 
     @FXML
-    private TableColumn<?, ?> trackNameColumn;
+    private TableColumn<Spotify, String> trackNameColumn;
 
     @FXML
-    private TableColumn<?, ?> yearColumn;
+    private TableColumn<Spotify, Integer> yearColumn;
 
     @FXML
     private TableView<Spotify> tableView;
