@@ -60,6 +60,10 @@ public class CreateSpotifyController implements Initializable {
 
     }
 
+    @FXML
+    void viewTableButton(ActionEvent event) {
+
+    }
 
 }
 
