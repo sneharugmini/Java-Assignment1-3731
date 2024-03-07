@@ -62,7 +62,7 @@ public class CreateSpotifyController implements Initializable {
 
     @FXML
     void viewTableButton(ActionEvent event) {
-
+        SceneChanger.changeScenes(event, "spotify-table-view.fxml", "Spotify!");
     }
 
 }
