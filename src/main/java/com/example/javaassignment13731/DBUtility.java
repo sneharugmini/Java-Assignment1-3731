@@ -1,8 +1,7 @@
 package main.java.com.example.javaassignment13731;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
 
 public class DBUtility {
     // create variables to hold username, password and connection url
@@ -46,5 +45,24 @@ public class DBUtility {
         }
 
         return songId;
+    }
+
+    // static function which will retrieve from db and return ArrayList
+    public static ArrayList<Spotify> getSongsFromDB(){
+        ArrayList<Spotify> songs = new ArrayList<>();
+
+        try(
+                Connection conn = DriverManager.getConnection(connectURL, user, pass);
+                Statement statement = conn.createStatement();
+                ResultSet resultSet = statement.executeQuery(sql);
+                ){
+           while (resultSet.next()){
+
+           }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return songs;
     }
 }
